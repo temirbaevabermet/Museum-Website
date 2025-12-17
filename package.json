@@ -2,6 +2,9 @@
   "name": "sci-fi-museum-website",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-alert-dialog": "^1.1.6",
@@ -57,6 +60,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "prebuild": "chmod +x ./node_modules/.bin/vite",
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
